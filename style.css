@@ -1,16 +1,22 @@
-
-:root {
-    --font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-/* 
+/* Setting standard font family for site
+Trebuchet is preferred; consider less serifs if site testing on mobile proves difficult to read.
+use 'var(--font)' to call if needed in text styling.
 */
+:root {
+    --font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 body {
     display: flex;
     flex-direction: column;
-	background-color: #3b384a;
+    /* Single-color bg on entire page. */
+    background-color: #372d4b;
 }
 
+/* Setting scalable settings for image.
+Consider changing values if mobile testing suggests.
+*/
 img {
     margin: 0 auto;
     width: 60%;
@@ -19,88 +25,124 @@ img {
 }
 
 header {
-    
-	height: 200px;
+    height: 150px;
 }
 
 main {
-	padding-top: 10px;
-	min-height: 400px;
+    padding-top: 10px;
+    min-height: 400px;
 }
 
 footer {
-	height: 100px;
+    margin-top: 10px;
+    height: 50px;
     text-align: center;
     font-family: var(--font);
     font-weight: 100;
-    font-variant: small-caps;
-    font-size: 16px;
+    font-size: 12px;
     color: #048BA8;
 }
 
-a:link{
-    color: #b5a2de ;
+a:link {
+    color: #b5a2de;
 }
-a:visited{
+
+a:visited {
     color: #cdc5de;
 }
-a:hover{
+
+a:hover {
     color: #a387e0
 }
-a:active{
+
+a:active {
     color: #8d67e1
 }
 
-hr {
+main>div>hr {
+    margin-top: 25px;
     width: 50%;
     border-top: 5px #0e849e;
     border-bottom: 5px #7cb3bf;
-    border-style:dashed;
+    border-style: dashed;
     border-width: 6px;
     border-radius: 10px;
-  }
+}
 
-h1, h2, h3, h4 {
+/* Setting a longer hr for header */
+header>div>hr {
+    margin-top: 10px;
+    width: 80%;
+    border-top: 5px #0e849e;
+    border-bottom: 5px #7cb3bf;
+    border-style: dashed;
+    border-width: 10px;
+}
+
+/* Set standard font/margins for page. */
+h1,
+h2,
+h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
     text-align: center;
     font-family: var(--font)
-}  
-h1 {
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Will be reusing h1 and h2 differently in different parts of page */
+header>div>h1 {
     font-weight: 400;
     font-variant: small-caps;
     font-style: italic;
     font-size: 56px;
-    color: #50c4df;
-  }
+    color: #2cafcd;
+}
 
-h2 {
-    text-align: center;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* distinguishing Main Text h1 from Header h1 */
+main>div>section>h1 {
     font-weight: 400;
     font-variant: small-caps;
-    font-size: 32px;
-    color: #048BA8;
-  }
+    font-size: 42px;
+    color: #33abc6;
+}
 
+/* distinguishing Main Text h2 from Header h2 */
+main>div>section>h2 {
+    font-weight: 400;
+    font-size: 22px;
+    color: #8cd1ec;
+
+}
+
+body>header>div>h2 {
+    font-weight: 400;
+    font-variant: small-caps;
+    font-size: 20px;
+    color: #2cafcd;
+}
+
+/* Only utilized in body */
 h3 {
-    text-align: center;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 400;
-    font-variant: small-caps;
-    font-size: 24px;
-    color: #0e849e;
-  }
+    font-size: 20px;
+    color: #d6c2fd;
+}
 
 p {
+    text-align: justify;
     padding-left: 60px;
     padding-right: 60px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 22px;
-    color: #B79FAD;
-  }
+    font-family: var(--font);
+    font-size: 18px;
+    color: #bfaede;
+}
 
-.box {
-    inline-size: 150px;
-    overflow: hidden;
+/* Setting styling for ul and ol elements */
+main>div>section>ul,
+ol {
+    font-family: var(--font);
+    font-size: 16px;
+    padding-left: 100px;
+    padding-right: 100px;
+    color: #bfaede;
 }
