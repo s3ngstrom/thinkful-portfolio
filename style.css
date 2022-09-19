@@ -46,12 +46,15 @@ footer {
 a:link {
     color: #b5a2de;
 }
+
 a:visited {
     color: #cdc5de;
 }
+
 a:hover {
     color: #a387e0
 }
+
 a:active {
     color: #8d67e1
 }
@@ -94,6 +97,7 @@ h1 {
     font-size: 56px;
     color: #2cafcd;
 }
+
 /* Will be reusing h2 differently in different parts of page */
 body>header>div>h2 {
     font-weight: 400;
@@ -110,13 +114,13 @@ main>div>section>h2 {
     color: #33abc6;
 }
 
-/* distinguishing Main Text h2 from Header h2 */
-h3 {
+main>div>section>article>h3 {
     font-weight: 400;
     font-size: 22px;
     color: #8cd1ec;
 
 }
+
 /* Only utilized in body */
 h4 {
     font-weight: 400;
